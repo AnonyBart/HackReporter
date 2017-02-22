@@ -1,0 +1,47 @@
+name: HackReporter
+version: 4.0
+description: This plugin is a FREE Report System, called Main, made by the Developer on Spigot 'Bart_'.
+author: Bart_
+authors: [Bart_]
+website: https://www.spigotmc.org/members/bart_.25718/
+
+main: me.bart_.hackreporter.Main
+database: false
+
+commands:
+   report:
+     description: Report a player.
+     aliases: [report]
+     usage: To report a player use /<command> [playername] [reason].
+   checksetspawn:
+     description: Set the spawn for the check.
+     aliases: [controllosetspawn]
+     permission: report.use.setspawn
+     usage: /&lt;command
+   check:
+     description: Do the check to a player.
+     aliases: [controllo]
+     permission: report.use.staff
+     usage: To do the check to a player /<command> [playername].
+   removereport:
+     description: Remove a report from the reports.yml.
+     aliases: [removereport]
+     permission: report.use.staff
+     usage: To remove a player from the reports.yml use /<command> [playername].
+
+permissions:
+   report.use.*:
+     description: Gives access to all Staff commands Main
+     children:
+       report.use.setspawn: true
+       report.use.staff: true
+       report.controllo.commandsbypass: true
+   report.use.setspawn:
+     description: Allows you to set the spawn for the controllo
+     default: op
+   report.use.staff:
+     description: Allows you to do the check to a player and remove reports from the file
+     default: op
+   report.check.commandsbypass:
+     description: Allows the player with this permission to don't get commands blocked during the controllo
+     default: op

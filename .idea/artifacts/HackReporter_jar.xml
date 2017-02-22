@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="HackReporter:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/HackReporter_jar</output-path>
+    <root id="archive" name="HackReporter.jar">
+      <element id="module-output" name="HackReporter" />
+      <element id="file-copy" path="$PROJECT_DIR$/plugin.yml" />
+    </root>
+  </artifact>
+</component>
